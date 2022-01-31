@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // ヘルパーが起動していたら終了させる
         let runningApps = NSWorkspace.shared.runningApplications
-        let isRunning = !runningApps.filter { $0.bundleIdentifier == LancherConst.launcherAppId }.isEmpty
+        let isRunning = !runningApps.filter { $0.bundleIdentifier == LauncherConst.launcherAppId }.isEmpty
         if isRunning {
             DistributedNotificationCenter.default().post(name: .killLauncher, object: Bundle.main.bundleIdentifier!)
         }

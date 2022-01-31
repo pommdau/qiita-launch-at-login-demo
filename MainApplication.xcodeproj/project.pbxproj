@@ -18,7 +18,7 @@
 		DA62DDBE27A43B0900132F3E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA62DDBD27A43B0900132F3E /* main.swift */; };
 		DA9A8E3627A7C7E900458CBB /* GeneralPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A8E3527A7C7E900458CBB /* GeneralPreferences.swift */; };
 		DA9A8E3927A7CB7100458CBB /* NSControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A8E3827A7CB7100458CBB /* NSControl+Extensions.swift */; };
-		DA9A8E3D27A7D06800458CBB /* LancherConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A8E3C27A7D06800458CBB /* LancherConst.swift */; };
+		DA9A8E3D27A7D06800458CBB /* LauncherConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9A8E3C27A7D06800458CBB /* LauncherConst.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,7 +50,7 @@
 		DA62DDBD27A43B0900132F3E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DA9A8E3527A7C7E900458CBB /* GeneralPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferences.swift; sourceTree = "<group>"; };
 		DA9A8E3827A7CB7100458CBB /* NSControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSControl+Extensions.swift"; sourceTree = "<group>"; };
-		DA9A8E3C27A7D06800458CBB /* LancherConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LancherConst.swift; sourceTree = "<group>"; };
+		DA9A8E3C27A7D06800458CBB /* LauncherConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherConst.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				DA9A8E3827A7CB7100458CBB /* NSControl+Extensions.swift */,
-				DA9A8E3C27A7D06800458CBB /* LancherConst.swift */,
+				DA9A8E3C27A7D06800458CBB /* LauncherConst.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 				DA62DD9827A438FA00132F3E /* ViewController.swift in Sources */,
 				DA9A8E3627A7C7E900458CBB /* GeneralPreferences.swift in Sources */,
 				DA9A8E3927A7CB7100458CBB /* NSControl+Extensions.swift in Sources */,
-				DA9A8E3D27A7D06800458CBB /* LancherConst.swift in Sources */,
+				DA9A8E3D27A7D06800458CBB /* LauncherConst.swift in Sources */,
 				DA62DD9627A438FA00132F3E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

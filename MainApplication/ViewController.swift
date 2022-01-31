@@ -24,12 +24,12 @@ class ViewController: NSViewController {
     // MARK: - Actions
     
     @IBAction func launchAtLoginCheckboxClicked(_ sender: NSButton) {
-        SMLoginItemSetEnabled(LancherConst.launcherAppId as CFString, GeneralPreferences.shared.launchAtLogin.isOn)
+        SMLoginItemSetEnabled(LauncherConst.launcherAppId as CFString, GeneralPreferences.shared.launchAtLogin.isOn)
     }
     
     @IBAction func checkSMLoginButtonClicked(_ sender: Any) {
         let jobDicts = SMCopyAllJobDictionaries(kSMDomainUserLaunchd).takeRetainedValue() as NSArray as! [[String:AnyObject]]
-        let jobEnabled = jobDicts.filter { $0["Label"] as! String == LancherConst.launcherAppId }.isEmpty == false
+        let jobEnabled = jobDicts.filter { $0["Label"] as! String == LauncherConst.launcherAppId }.isEmpty == false
         print("SMLogin: \(jobEnabled)")
     }
     
@@ -39,7 +39,7 @@ class ViewController: NSViewController {
     
     @IBAction func resetButtonClicked(_ sender: Any) {
         GeneralPreferences.shared.resetUserDefaults()
-        SMLoginItemSetEnabled(LancherConst.launcherAppId as CFString, GeneralPreferences.shared.launchAtLogin.isOn)
+        SMLoginItemSetEnabled(LauncherConst.launcherAppId as CFString, GeneralPreferences.shared.launchAtLogin.isOn)
     }
 }
 
