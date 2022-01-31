@@ -9,38 +9,29 @@ import Cocoa
 
 class GeneralPreferences {
     
+    static let shared = GeneralPreferences()
+    
+    // MARK: - Enum
+    
     enum UserDefaultsKey: String {
-        case GeneralPreferences_AccountURL
         case GeneralPreferences_LaunchAtLogin = "launchAtLogin"
     }
     
-    static let shared = GeneralPreferences()
+    // MARK: - LifeCycle
     
     init() {
         UserDefaults.standard.register(defaults: [
-            UserDefaultsKey.GeneralPreferences_AccountURL.rawValue : "",
             UserDefaultsKey.GeneralPreferences_LaunchAtLogin.rawValue: false
         ])
     }
     
-    // FOR DEBUGGING
+    // MARK: - DEBUGGING
+    
     func resetUserDefaults() {
-        UserDefaults.standard.removeObject(forKey: UserDefaultsKey.GeneralPreferences_AccountURL.rawValue)
         UserDefaults.standard.removeObject(forKey: UserDefaultsKey.GeneralPreferences_LaunchAtLogin.rawValue)
     }
     
-    var accountURL: String {
-        get {
-            guard let accountName = UserDefaults.standard.string(forKey: UserDefaultsKey.GeneralPreferences_AccountURL.rawValue) else {
-                return ""
-            }
-            return accountName
-        }
-        
-        set(accountURL) {
-            UserDefaults.standard.set(accountURL, forKey: UserDefaultsKey.GeneralPreferences_AccountURL.rawValue)
-        }
-    }
+    // MARK: - Variables
     
     var launchAtLogin: NSControl.StateValue {
         get {

@@ -97,10 +97,10 @@
 				DA9A8E3727A7CB5D00458CBB /* Utils */,
 				DA62DD9527A438FA00132F3E /* AppDelegate.swift */,
 				DA62DD9727A438FA00132F3E /* ViewController.swift */,
+				DA9A8E3527A7C7E900458CBB /* GeneralPreferences.swift */,
 				DA62DD9927A438FB00132F3E /* Assets.xcassets */,
 				DA62DD9B27A438FB00132F3E /* Main.storyboard */,
 				DA62DD9E27A438FB00132F3E /* MainApplication.entitlements */,
-				DA9A8E3527A7C7E900458CBB /* GeneralPreferences.swift */,
 			);
 			path = MainApplication;
 			sourceTree = "<group>";
