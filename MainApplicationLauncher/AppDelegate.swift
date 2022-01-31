@@ -22,18 +22,21 @@ extension AppDelegate: NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
 
+        // メインアプリの起動確認
         let mainAppIdentifier = "com.gmail.ikeh1024.MainApplication"
         let runningApps = NSWorkspace.shared.runningApplications
         let isRunning = !runningApps.filter { $0.bundleIdentifier == mainAppIdentifier }.isEmpty
-
+        
         if !isRunning {
+            // メインアプリ起動時に終了させる通知を受け取るための設定
             DistributedNotificationCenter
                 .default()
                 .addObserver(self,
                              selector: #selector(self.terminate),
                              name: .killLauncher,
                              object: mainAppIdentifier)
-            
+
+            // メインアプリを起動する
             if !isRunning,
                let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: mainAppIdentifier) {
                 let config = NSWorkspace.OpenConfiguration()
@@ -42,6 +45,7 @@ extension AppDelegate: NSApplicationDelegate {
             }
         }
         else {
+            // メインアプリが起動していれば何もせずに終了
             self.terminate()
         }
     }
